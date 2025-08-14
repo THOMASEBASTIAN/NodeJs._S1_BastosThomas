@@ -1,7 +1,7 @@
-// itemController.js
 
-const itemModel = require('./itemModel');
-const itemView = require('./itemView');
+
+const itemModel = require('../model/itemModel');
+const itemView = require('../view/itemView');
 
 function handleCreateItem() {
     const nombre = itemView.promptForName();

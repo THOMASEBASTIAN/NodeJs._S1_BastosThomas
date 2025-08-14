@@ -1,4 +1,4 @@
-// itemView.js
+
 
 const prompt = require('prompt-sync')();
 

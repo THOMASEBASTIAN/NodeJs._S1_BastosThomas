@@ -1,7 +1,7 @@
-// index.js
 
-const itemView = require('./itemView');
-const itemController = require('./itemController');
+
+const itemView = require('./view/itemView');
+const itemController = require('./controller/itemController');
 
 let booleanito = true;
 
