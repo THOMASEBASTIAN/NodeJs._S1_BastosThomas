@@ -1,7 +1,7 @@
 
 
-const itemModel = require('../model/itemModel');
-const itemView = require('../view/itemView');
+const itemModel = require('../models/itemModel');
+const itemView = require('../views/itemView');
 
 function handleCreateItem() {
     const nombre = itemView.promptForName();
