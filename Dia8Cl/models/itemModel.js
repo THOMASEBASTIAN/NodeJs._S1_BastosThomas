@@ -12,7 +12,6 @@ class Item {
     }
 
 }
-//Crear el ItemModel con un arreglo privado y métodos CRUD
 class ItemModel {
     constructor() {
         this._items = [];
@@ -33,6 +32,7 @@ class ItemModel {
 
     buscarPorId(id){
         return this._items.find(i => i["id"] === Number(id)) || null;
+        
     }
 
     actualizar(id,{nombre,descripcion}){
@@ -50,5 +50,24 @@ class ItemModel {
         this._items.splice(idx,1);
         return true;
     }
+}
+class ItemView {
+   
+
+    pedirIdParaActualizar(prompt) {
+        const id = prompt("Ingrese el ID del ítem que desea actualizar: ");
+        return id;
+    }
+
+    pedirDatosActualizados(prompt) {
+        const nombre = prompt("Nuevo nombre (deje en blanco para no cambiar): ").trim();
+        const descripcion = prompt("Nueva descripción (deje en blanco para no cambiar): ").trim();
+        return {
+            nombre: nombre || undefined, // undefined para que el modelo ignore si está vacío
+            descripcion: descripcion || undefined
+        };
+    }
+    
+    // ...
 }
 module.exports= {ItemModel};
